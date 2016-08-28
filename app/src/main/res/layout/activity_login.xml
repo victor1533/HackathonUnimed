@@ -42,17 +42,18 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
+        android:id="@+id/txtNumCartao"
         android:hint="Ex: 0 890 908909878909 0"
         android:layout_marginBottom="10dp"
 
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:numeric="integer" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Acessar sistema"
-        android:id="@+id/button"
+        android:id="@+id/btnAcessar"
         android:layout_gravity="center_horizontal"
         android:padding="5dp"
         android:textColor="#FFFFFF"

@@ -1,12 +1,13 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
+def dbflow_version = "3.1.1"
+
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
-
     defaultConfig {
         applicationId "br.com.lapps.hackathonunimed"
-        minSdkVersion 10
+        minSdkVersion 19
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
@@ -17,17 +18,25 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    productFlavors {
+    }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    apt 'com.jakewharton:butterknife-compiler:8.0.1'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
 
+    apt "com.github.Raizlabs.DBFlow:dbflow-processor:${dbflow_version}"
+    compile "com.github.Raizlabs.DBFlow:dbflow-core:${dbflow_version}"
+    compile "com.github.Raizlabs.DBFlow:dbflow:${dbflow_version}"
+
+    apt 'com.jakewharton:butterknife-compiler:8.0.1'
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'com.android.support:design:23.4.0'
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
     compile 'com.jakewharton:butterknife:8.0.1'
+    compile 'br.com.jansenfelipe:androidmask:1.0.1'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.3.1'
 
 }
