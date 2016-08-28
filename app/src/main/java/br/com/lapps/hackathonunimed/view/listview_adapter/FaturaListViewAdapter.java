@@ -54,24 +54,20 @@ public class FaturaListViewAdapter extends BaseAdapter implements Serializable {
         ItemSuporte itemHolder;
         view = mInflater.inflate(R.layout.item_list_fatura, null);
         itemHolder = new ItemSuporte();
-        itemHolder.mes = (TextView) view.findViewById(R.id.);
-        itemHolder.hora = (TextView) view.findViewById(R.id.horarioPonto);
-        itemHolder.turno = (TextView) view.findViewById(R.id.turnoPonto);
+        itemHolder.mes = (TextView) view.findViewById(R.id.mesFatura);
+        itemHolder.valor = (TextView) view.findViewById(R.id.valorFatura);
         view.setTag(itemHolder);
 
-        final Ponto ponto = itens.get(position);
-        itemHolder.dia.setText(Datas.DateToddMMyyyy(ponto.getCreatedAt()));
-        itemHolder.hora.setText(Datas.DateToHHmm(ponto.getCreatedAt()));
-        if(ponto.getTurno() != null){
-            itemHolder.turno.setText(ponto.getTurno().getNome() + " / " + (ponto.isEntrada() ? "Entrada" : "Saida"));
-        }else{
-            itemHolder.turno.setText((ponto.isEntrada() ? "Entrada" : "Saida"));
-        }
+        final Fatura fatura = itens.get(position);
+        itemHolder.mes.setText(fatura.getStringMesVencimento());
+
+        itemHolder.valor.setText(String.format("%.2f", fatura.getValorTotal()));
+
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(contexto, ComprovantePontoActivity.class);
-                intent.putExtra("ponto", ponto);
+                Intent intent = new Intent(contexto, Fatura.class);
+                intent.putExtra("fatura", fatura);
                 contexto.startActivity(intent);
             }
         });
