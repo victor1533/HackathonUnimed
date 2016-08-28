@@ -1,9 +1,8 @@
 package br.com.lapps.hackathonunimed.model.webservice.retrofit.listener;
 
-import br.com.lapps.hackathonunimed.model.Beneficiario;
+import br.com.lapps.hackathonunimed.model.pojo.Beneficiario;
 import retrofit2.Call;
 import retrofit2.http.GET;
-import retrofit2.http.POST;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
 

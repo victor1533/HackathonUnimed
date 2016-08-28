@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.widget.Toast;
 
 import br.com.lapps.hackathonunimed.model.Aplicacao;
-import br.com.lapps.hackathonunimed.model.Beneficiario;
+import br.com.lapps.hackathonunimed.model.pojo.Beneficiario;
 import br.com.lapps.hackathonunimed.model.webservice.retrofit.listener.BeneficiarioListener;
 import br.com.lapps.hackathonunimed.model.webservice.retrofit.listener.RetrofitBeneficiario;
 import br.com.lapps.hackathonunimed.view.LoginActivity;

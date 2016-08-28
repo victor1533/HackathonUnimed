@@ -1,4 +1,4 @@
-package br.com.lapps.hackathonunimed.model;
+package br.com.lapps.hackathonunimed.model.pojo;
 
 /**
  * Created by Orochi on 27/08/2016.

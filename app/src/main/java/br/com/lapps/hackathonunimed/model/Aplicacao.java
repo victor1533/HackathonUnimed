@@ -5,6 +5,8 @@ import android.app.Application;
 import com.raizlabs.android.dbflow.config.FlowConfig;
 import com.raizlabs.android.dbflow.config.FlowManager;
 
+import br.com.lapps.hackathonunimed.model.pojo.Beneficiario;
+
 /**
  * Created by Orochi on 27/08/2016.
  */

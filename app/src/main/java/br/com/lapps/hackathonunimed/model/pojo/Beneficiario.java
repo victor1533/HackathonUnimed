@@ -1,4 +1,4 @@
-package br.com.lapps.hackathonunimed.model;
+package br.com.lapps.hackathonunimed.model.pojo;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

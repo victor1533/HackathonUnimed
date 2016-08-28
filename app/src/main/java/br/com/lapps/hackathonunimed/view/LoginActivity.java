@@ -16,7 +16,7 @@ import br.com.jansenfelipe.androidmask.MaskEditTextChangedListener;
 import br.com.lapps.hackathonunimed.R;
 import br.com.lapps.hackathonunimed.controller.LoginController;
 import br.com.lapps.hackathonunimed.model.Aplicacao;
-import br.com.lapps.hackathonunimed.model.Beneficiario;
+import br.com.lapps.hackathonunimed.model.pojo.Beneficiario;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
